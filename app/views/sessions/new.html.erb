@@ -1,0 +1,7 @@
+<%= form_for :session, url: entrar_path, method: :post do |f| %>
+  <%= f.text_field :mat %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Entrar" %>
+
+<% end %>
