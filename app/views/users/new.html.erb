@@ -1,0 +1,10 @@
+<%= form_for @user do |f| %>
+  <%= render "layouts/error_mesages", object: f.object %>
+  <%= f.text_field :name %>
+  <%= f.text_field :mat %>
+  <%= f.text_field :password %>
+  <%= f.text_field :password_confirmation %>
+
+  <%= f.submit "sign_up" %>
+
+<% end %>
