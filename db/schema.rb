@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_10_214916) do
+ActiveRecord::Schema.define(version: 2021_02_12_215347) do
 
   create_table "users", force: :cascade do |t|
     t.string "name", default: "", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_10_214916) do
     t.string "password_digest", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role"
   end
 
 end

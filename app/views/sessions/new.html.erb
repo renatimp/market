@@ -1,7 +1,19 @@
-<%= form_for :session, url: entrar_path, method: :post do |f| %>
-  <%= f.text_field :mat %>
-  <%= f.password_field :password %>
 
-  <%= f.submit "Entrar" %>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Entrar</h1>
+  </div>
 
-<% end %>
+  <div class="col-md-6 col-md-offset-3 col-xs-12">
+    <%= form_for :session, url: entrar_path, method: :post do |f| %>
+      <%= f.label :mat %>
+      <%= f.text_field :mat %><br>
+
+      <%= f.label :password%>
+      <%= f.password_field :password %><br>
+
+      <%= f.submit "Entrar" %>
+
+    <% end %>
+  </div>
+</div>
