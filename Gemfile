@@ -5,6 +5,7 @@ ruby '2.6.1'
 gem 'devise'
 gem "pundit"
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'faker'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

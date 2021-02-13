@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum role: {admin: 0, gerente: 1 , caixa: 2}
+  enum role: {admin: 0, gerente: 1 , caixa: 2, estoque: 3}
 
   has_secure_password
 
