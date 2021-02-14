@@ -19,10 +19,14 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Panel Heading</h3>
+                    <h3 class="panel-title">Usuários cadastrados</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                    <% if policy(User).new? %>
+                      <%= link_to 'Criar novo Usuário' , new_user_path , class: "btn btn-sm btn-primary btn-create" %>
+                    <% else %>
+                    <%= link_to 'Criar teste' , new_user_path , class: "btn btn-sm btn-primary btn-create" %>
+                    <% end %>
                   </div>
                 </div>
               </div>
