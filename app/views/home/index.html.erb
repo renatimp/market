@@ -23,9 +23,9 @@
                   </div>
                   <div class="col col-xs-6 text-right">
                     <% if policy(User).new? %>
-                      <%= link_to 'Criar novo Usuário' , new_user_path , class: "btn btn-sm btn-primary btn-create" %>
+                      <%= link_to 'Novo Usuário' , new_user_path , class: "btn btn-sm btn-primary btn-create" %>
                     <% else %>
-                    <%= link_to 'Criar teste' , new_user_path , class: "btn btn-sm btn-primary btn-create" %>
+                    <%= link_to 'Novo Usuário' , '#' , class: "btn btn-sm btn-primary btn-create" , disabled: "disabled" %>
                     <% end %>
                   </div>
                 </div>

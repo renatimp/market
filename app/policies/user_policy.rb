@@ -1,6 +1,6 @@
 class UserPolicy < ApplicationPolicy
   def create?
-    @user.admin?
+    @user.admin? || @user.gerente?
   end
 
   class Scope < Scope
