@@ -6,6 +6,7 @@ gem 'devise'
 gem "pundit"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'faker'
+gem "font-awesome-rails"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

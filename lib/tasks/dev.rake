@@ -24,7 +24,7 @@ namespace :dev do
     10.times do
       User.create!(
         name: Faker::Name.name,
-        mat: Faker::Number.number(digits: 6),
+        mat: Faker::Number.number(digits: 10),
         role: [1,2,3].sample,
         password: "123456",
         password_confirmation: "123456"
