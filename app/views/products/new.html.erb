@@ -1,0 +1,16 @@
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :code %>
+  <%= f.text_field :code %><br>
+
+  <%= f.label :price_cents %>
+  <%= f.text_field :price_cents %><br>
+
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %><br>
+
+  <%= f.submit 'Cadastrar' %>
+
+<% end %>

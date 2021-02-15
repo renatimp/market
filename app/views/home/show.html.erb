@@ -1,2 +1,9 @@
 <h1>Bem vindo, <%= current_user.name %></h1>
+<%= link_to 'Novo produto' , new_product_path %>
 <%= render 'estoque' %>
+<br><br>
+
+<% @products.each do |product| %>
+  <%= product.name %>
+  <%= product.code %><br>
+<% end %>

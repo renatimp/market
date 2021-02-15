@@ -5,6 +5,13 @@ class ProductsController < ApplicationController
   end
 
   def create
+    @product = Product.new(product_params)
+    if @product.save
+      flash[:success] = 'Produto cadastrado com sucesso!'
+      redirect_to profile_url
+    else
+      render 'new'
+    end
 
   end
 
