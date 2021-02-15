@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :destroy]
-  after_action :verify_authorized, only: [:new, :destroy]
+  after_action :verify_authorized, only: [:new, :destroy, :edit]
 
   def new
     @user = User.new
@@ -18,9 +18,11 @@ class UsersController < ApplicationController
   end
 
   def edit
+    authorize @user
   end
 
   def update
+
     if @user.update(user_params)
       flash[:success] = "Dados atualizados com sucesso!"
       redirect_to index_url
@@ -43,6 +45,12 @@ class UsersController < ApplicationController
   end
 
   private
+
+  #def# user_params_without_password
+  #  user_params.delete(:password)
+  #  user_params.delete(:password_confirmation)
+  #  user_params
+  #end
   def user_params
     params.require(:user).permit(:name, :mat, :role, :password, :password_confirmation)
   end
