@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  resources :users, only: [:new, :create]
+  root 'sessions#new'
+  resources :users, only: [:new, :create, :edit, :update, :destroy]
+  get 'index', to: 'home#index'
   get 'entrar', to: 'sessions#new'
   get 'profile', to: 'home#show'
   post 'entrar', to: 'sessions#create'

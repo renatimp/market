@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  layout "session"
   def new
   end
 
@@ -6,12 +7,13 @@ class SessionsController < ApplicationController
     user = User.find_by(mat: params[:session][:mat])
     if user && user.authenticate(params[:session][:password])
       sign_in(user)
+      flash[:success] = "Login realizado com sucesso"
       if user.role == 'admin'
-        redirect_to root_url
+        redirect_to index_url
       else
         redirect_to profile_url
       end
-      
+
     else
       flash.now[:danger] = "Email ou senha invalidos !"
       render 'new'

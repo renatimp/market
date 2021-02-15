@@ -2,19 +2,18 @@
   <div class="row">
     <div class="col-md-8">
       <section>
-        <h1 class="entry-title"><span>Cadastrando Usuário</span> </h1>
+        <h1 class="entry-title"><span>Editando Usuário</span> </h1>
         <hr>
-            <%= form_for @user, html: { class: "form-horizontal" , id: "signup"} do |f| %>
+            <%= form_for @user , html: { class: "form-horizontal" , id: "signup"} do |f| %>
 
                 <%= render  'users/form'  , f: f %>
 
                 <div class="form-group">
           <div class="col-xs-offset-3 col-xs-10">
-            <%= f.submit "Cadastrar" , class: "btn btn-primary" %>
+            <%= f.submit "Atualizar" , class: "btn btn-primary" %>
           </div>
         </div>
       <% end %>
     </div>
 </div>
 </div>
-
